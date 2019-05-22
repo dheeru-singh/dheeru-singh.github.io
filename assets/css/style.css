@@ -8,13 +8,11 @@ body{
 header{
     background-color: #ffffff;
     border-bottom: 2px solid #cccccc;
-    width:100%;
-    display: inline-block;
     box-shadow: 1px 2px 6.5px #bfbebe;
+    
 }
 .header-content{
-    width:100%;
-    max-width:960px;
+   
     margin: 0 auto;
 }
 .logo{
@@ -26,42 +24,60 @@ header{
     padding: 10px;   
 }
 nav{
-   float: right; 
+   /* float: right;  */
 }
 nav ul{
     list-style-type: none;
-    padding: 0px;
+    padding: 10px 0px 0px;
 }
 nav ul li{
     display: inline-block;
 }
+
 nav ul li a{
     text-decoration: none;
     color: #777777;
     border-left: 1px solid #dddddd;
     padding-left: 15px;
-    font-weight: 600;
 }
 nav ul li:first-child a{
     border-left: none;
 }
-.main-outer-box{
-    padding-bottom: 70px;
+.nav-link{
+    color: #777777 !important;
+    font-weight: 600;
+}
+.navbar{
+    padding: 0px;
+}
+nav ul li.active a,
+nav ul li a:hover{
+    color: #3d66c1 !important;
+}
+@media (min-width: 768px){
+.nav-link{
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+.navbar-expand-md{
+    padding: 0;
+}
 }
 .main-content{
     background-color: #ffffff;
-    border: 1px solid #dddddd;  
-    max-width: 900px;
+    border: 1px solid #dddddd;
+    display: inline-block;
     margin: 40px auto;
     padding: 30px;
     min-height: 300px;
+    width: 100%;
 }
 .main-heading{
     font-family: 'Georgia', Times, Times New Roman, serif;
-    color: #3d66c1;
-    margin: 0;
+    color:#3d66c1;
+    margin: 0 0 20px;
     border-bottom: 2px solid #dddddd;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 }
 .profile-pic{
     float: left;
@@ -103,7 +119,6 @@ footer{
 }
 .portfolio-section{
     margin-top: 30px;
-    display: flow-root;
 }
 .portfolio-box {
     width: 300px;
@@ -138,21 +153,34 @@ footer{
     background-color:#ffffff !important;
     box-shadow: 1px 2px 7px #3d66c1; 
 }
-nav ul li a:hover{
-    color:#3d66c1; 
+.navbar-toggler{
+    background-color: #3d66c1;
 }
-nav ul li.active a{
-    color:#3d66c1; 
+.main-outer-box {
+    padding-bottom: 70px;
 }
-@media only screen and (max-width: 600px) {
-    header{
+@media only screen and (max-width: 768px) {
+    
+    header {
         text-align: center;
     }
-    .logo {
-      width:100%;
-      padding: 10px 0px;
-    }
-    nav{
-        float: inherit;
-    }
-  }
+   header .col-sm-6{
+       padding: 0px;
+   }
+   nav{
+    float: initial;
+   }
+   nav ul li a{
+       border-left:0px;
+      background-color: #f3f3f3;
+      border-bottom: 2px solid #fff;
+   }
+}
+@media only screen and (max-width: 450px) {
+    .profile-pic{
+        clear: both;
+        float: initial;
+        display: block;
+        padding-bottom: 15px;
+       }
+}
