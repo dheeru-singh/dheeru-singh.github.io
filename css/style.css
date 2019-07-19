@@ -36,7 +36,7 @@
 .site-title{
     color:#ff697d !important;
 }
-.mCS_img_loaded{
+.mCS_img_loaded,.portfolio-grid img,.my-photo-block img{
     border-radius: 20px;
     border: 5px solid #fff;
 }
@@ -50,4 +50,9 @@
     margin: 10px 0px;
     font-size: 1rem !important;
     padding: 10px !important;
+}
+@media only screen and (max-width:990px){
+    .template-style-dark .pt-page{
+        border-radius: 0px;
+    }
 }
