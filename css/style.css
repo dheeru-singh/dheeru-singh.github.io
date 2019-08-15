@@ -51,6 +51,9 @@
     font-size: 1rem !important;
     padding: 10px !important;
 }
+.skill-list li{
+    color: #fff;
+}
 @media only screen and (max-width:990px){
     .template-style-dark .pt-page{
         border-radius: 0px;
